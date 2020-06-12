@@ -42,9 +42,12 @@ Choose (3) to quit`);
     let lastContent = lastEntry[i].content;
     alert(`Title:${lastTitle} \n Content ${lastContent}`);
     // Here we ask the user to write a new entry
-    while (yourOption === "1") {
-      let newTitle = prompt('Your new title');
-      let newContent = prompt('Your new content');
+    for (i = 0; i < yourOption; i++) {
+    if (yourOption === "1") {
+      let newTitle = prompt('Want to update your entries? Write new title');
+      let newContent = prompt('And then your content');
+      alert(`Title: ${newTitle} \n Content ${newContent}`);
     }
+  }
   }
 } myProgram();

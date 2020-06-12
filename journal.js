@@ -37,17 +37,25 @@ Choose (3) to quit`);
     alert(`Title: ${firstTitle} \n Content: ${firstContent}`);
     let secondTitle = secondEntry[i].title;
     let secondContent = secondEntry[i].content;
-    alert(`Title:${secondTitle} \n Content:${secondContent}`);
+    alert(`Title: ${secondTitle} \n Content: ${secondContent}`);
     let lastTitle = lastEntry[i].title;
     let lastContent = lastEntry[i].content;
-    alert(`Title:${lastTitle} \n Content ${lastContent}`);
+    alert(`Title: ${lastTitle} \n Content: ${lastContent}`);
     // Here we ask the user to write a new entry
     for (i = 0; i < yourOption; i++) {
-    if (yourOption === "1") {
-      let newTitle = prompt('Want to update your entries? Write new title');
-      let newContent = prompt('And then your content');
-      alert(`Title: ${newTitle} \n Content ${newContent}`);
+      if (yourOption === "1") {
+        let newTitle = prompt('Want to update your entries? Write new title');
+        let newContent = prompt('And then your content');
+        alert(`Title: ${newTitle} \n Content: ${newContent}`);
+      } else {
+        for (i = 0; i < yourOption; i++) {
+          if (yourOption === "2") {
+            let newTitle = prompt('Want to update your entries? Write new title');
+            let newContent = prompt('And then your content');
+            alert(`Title: ${newTitle} \n Content: ${newContent}`);
+          }
+        }
+      }
     }
-  }
   }
 } myProgram();

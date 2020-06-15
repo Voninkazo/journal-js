@@ -43,37 +43,37 @@ Choose (5) to delete a specific entry`);
   else {
     alert('See you then!');
   }
-// Let's create a a function that containing the list of all entries
-function oldEntries() {
-  let i = 0;
-  //Let's loop through the array of object to find all the entries
-  for (i = 0; i < myEntries.length; i++) {
-  // Here we show them one at a time
-    alert(`Title: ${myEntries[i].title} \n Content: ${myEntries[i].content}`);
+  // Let's create a a function that containing the list of all entries
+  function oldEntries() {
+    let i = 0;
+    //Let's loop through the array of object to find all the entries
+    for (i = 0; i < myEntries.length; i++) {
+      // Here we show them one at a time
+      alert(`Title: ${myEntries[i].title} \n Content: ${myEntries[i].content}`);
+    }
+    myProgram();
   }
- myProgram();
-}
 
-// Here we ask the user to write a new entry
-function addingEntries() {
-  let newTitle = prompt('Want to update your entries? Write new title');// New title
-  let newContent = prompt('And then your content');// New content
-//This is the new array of the new journal
-  let newEntry = [newTitle,newContent];
-// Then we're going to push it
-  myEntries.push(newEntry);
-  myProgram();
-}
-function deleteJournal() {
-  myEntries.pop();
-} myProgram();
-
-function deleteSpecific() {
-  let indexNum = prompt('Which index do you want to delete?');
-  if (indexNum < myEntries.length) {
-    myEntries.splice(indexNum, 1);
+  // Here we ask the user to write a new entry
+  function addingEntries() {
+    let newTitle = prompt('Want to update your entries? Write new title');// New title
+    let newContent = prompt('And then your content');// New content
+    //This is the new array of the new journal
+    let newEntry = [newTitle, newContent];
+    // Then we're going to push it
+    myEntries.push(newEntry);
+    myProgram();
   }
-  return myEntries;
-}
+  function deleteJournal() {
+    myEntries.pop();
+  } myProgram();
+
+  function deleteSpecific() {
+    let indexNum = prompt('Which index do you want to delete?');
+    if (indexNum < myEntries.length) {
+      myEntries.splice(indexNum, 1);
+    }
+    return myEntries;
+  }
 
 } myProgram();

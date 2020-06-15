@@ -23,7 +23,8 @@ function myProgram() {
   // Let's create a prompt in which users can choose what they want to do
   let yourOption = prompt(`Choose (1) for listing the all entries,
 Choose (2) to add a new entry,
-Choose (3) to quit`);
+Choose (3) to quit,
+Choose (4) to delete the last entry`);
 
   // Here we set the conditions
   if (yourOption === "1") {
@@ -31,6 +32,9 @@ Choose (3) to quit`);
   }
   else if (yourOption === "2") {
     addingEntries();
+  }
+  else if (yourOption === "4") {
+    deleteJournal();
   }
   else {
     alert('See you then!');
@@ -56,4 +60,9 @@ function addingEntries() {
   myEntries.push(newEntry);
   myProgram();
 }
+function deleteJournal() {
+  myEntries.pop();
+}
+myProgram();
+
 } myProgram();

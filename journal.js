@@ -35,4 +35,25 @@ Choose (3) to quit`);
   else {
     alert('See you then!');
   }
+// Let's create a a function that containing the list of all entries
+function oldEntries() {
+  let i = 0;
+  //Let's loop through the array of object to find all the entries
+  for (i = 0; i < myEntries.length; i++) {
+  // Here we show them one at a time
+    alert(`Title: ${myEntries[i].title} \n Content: ${myEntries[i].content}`);
+  }
+ myProgram();
 }
+
+// Here we ask the user to write a new entry
+function addingEntries() {
+  let newTitle = prompt('Want to update your entries? Write new title');// New title
+  let newContent = prompt('And then your content');// New content
+//This is the new array of the new journal
+  let newEntry = [newTitle, newContent];
+// Then we're going to push it
+  myEntries.push(newEntry);
+  myProgram();
+}
+} myProgram();

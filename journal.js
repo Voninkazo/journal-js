@@ -24,7 +24,8 @@ function myProgram() {
   let yourOption = prompt(`Choose (1) for listing the all entries,
 Choose (2) to add a new entry,
 Choose (3) to quit,
-Choose (4) to delete the last entry`);
+Choose (4) to delete the last entry,
+Choose (5) to delete a specific entry`);
 
   // Here we set the conditions
   if (yourOption === "1") {
@@ -35,6 +36,9 @@ Choose (4) to delete the last entry`);
   }
   else if (yourOption === "4") {
     deleteJournal();
+  }
+  else if (yourOption === "5") {
+    deleteSpecific();
   }
   else {
     alert('See you then!');
@@ -55,14 +59,21 @@ function addingEntries() {
   let newTitle = prompt('Want to update your entries? Write new title');// New title
   let newContent = prompt('And then your content');// New content
 //This is the new array of the new journal
-  let newEntry = [newTitle, newContent];
+  let newEntry = [newTitle,newContent];
 // Then we're going to push it
   myEntries.push(newEntry);
   myProgram();
 }
 function deleteJournal() {
   myEntries.pop();
+} myProgram();
+
+function deleteSpecific() {
+  let indexNum = prompt('Which index do you want to delete?');
+  if (indexNum < myEntries.length) {
+    myEntries.splice(indexNum, 1);
+  }
+  return myEntries;
 }
-myProgram();
 
 } myProgram();

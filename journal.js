@@ -15,7 +15,7 @@ const myEntries = [
   {
     title: "Last journal",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quam illum odio consectetur quisquam, ipsum atque quidem excepturi tempora vero sint obcaecati. Eius, modi architecto quos blanditiis at illo quisquam?"
-  }
+  },
 ];
 // My program
 
@@ -47,7 +47,7 @@ Choose (5) to delete a specific entry`);
   function oldEntries() {
     let i = 0;
     //Let's loop through the array of object to find all the entries
-    for (i = 0; i < myEntries.length; i++) {
+    for (let i = 0; i < myEntries.length; i++) {
       // Here we show them one at a time
       alert(`Title: ${myEntries[i].title} \n Content: ${myEntries[i].content}`);
     }
@@ -59,11 +59,14 @@ Choose (5) to delete a specific entry`);
     let newTitle = prompt('Want to update your entries? Write new title');// New title
     let newContent = prompt('And then your content');// New content
     //This is the new array of the new journal
-    let newEntry = [newTitle, newContent];
+    let newEntry = { title: newTitle, content: newContent };
+    newEntry.newTitle = newTitle;
+    newEntry.newContent = newContent;
     // Then we're going to push it
     myEntries.push(newEntry);
     myProgram();
   }
+
   function deleteJournal() {
     myEntries.pop();
   } myProgram();
@@ -76,4 +79,6 @@ Choose (5) to delete a specific entry`);
     return myEntries;
   }
 
-} myProgram();
+}
+
+myProgram();
